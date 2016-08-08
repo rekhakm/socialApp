@@ -1,0 +1,55 @@
+<ion-view view-title="adsList" ng-controller="AdvertisementsCtrl as vm">
+    <!--<ion-content class="has-header">-->
+
+    List of all advertisment will display here
+
+    <ion-content ng-class="{expanded:$scope.isExpanded}">
+
+        <div class="hero slide-up" style="background-image: url('img/profile-bg.png');">
+            <div class="content">
+                <div class="avatar" style="background-image: url('img/profile-icon.png');"></div>
+            </div>
+        </div>
+
+        <div class="list">
+
+            <div class="card item" ng-repeat="ad in vm.adsList">
+
+                <a ng-href="#/app/adDetails/{{ad.advertisementId }}" class="item item-avatar item-icon-right">
+                    <img src= "{{ad.image}}">
+                   
+                    <h2>{{ad.title}}</h2>
+                    <p>{{ad.image}}</p>
+                    <i class="icon ion-chatbubble muted"></i>
+                    <!--<a ui-sref="app.advertisementDetails ">-->
+                    <!--<div class="item item-icon-left ">
+                        <img ng-src="{{ad.image}} ">
+                    </div>-->
+                    <!--
+                <a class="button button-light " ng-href="#/app/locationmap/{{vm.profileInfo.index}} ">
+                    <ion-icon ios="ios-pin" md="md-pin"></ion-icon>
+                </a>-->
+
+                    <!--<div class="item item-divider">
+                        <h2> {{vm.profileInfo.name.first}} {{vm.profileInfo.name.last }}</h2>
+                    </div>
+
+                    <div class="item item-body">
+                        <h2> {{vm.profileInfo.about}} </h2>
+                    </div>
+
+                    <div class="item item-divider">
+                        <h2> {{vm.profileInfo.address}} </h2>
+                    </div>-->
+                </a>
+            </div>
+        </div>
+
+
+
+
+    </ion-content>
+</ion-view>
+
+<!--</div>
+  </ion-content>-->
